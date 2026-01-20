@@ -1,0 +1,23 @@
+# Environment
+.env
+
+# Dependencies
+/vendor/
+/node_modules/
+
+# Laravel storage
+/storage/*.key
+/storage/framework/*
+/storage/logs/*
+
+# Cache
+/bootstrap/cache/*
+
+# Logs
+npm-debug.log
+yarn-error.log
+
+# IDE / OS
+.idea
+.vagrant
+

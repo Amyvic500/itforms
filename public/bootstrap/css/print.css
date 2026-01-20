@@ -1,0 +1,10 @@
+@media print {
+    .make-grid(print-A4);
+}
+
+.make-print-A4-column(@columns) {
+    @media print {
+        float: left;
+        width: percentage((@columns / @grid-columns));
+    }
+}
