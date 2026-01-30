@@ -1,51 +1,66 @@
-<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
+# User Access Request Form
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+A Laravel Blade–based application for managing IT system user access requests across multiple enterprise systems.
 
-## About Laravel
+## Overview
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as:
+The **User Access Request Form** is designed to handle common IT access management scenarios, including:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+- New user account creation
+- Modification of existing user access
+- Password resets
+- Additional system authorizations
 
-Laravel is accessible, yet powerful, providing tools needed for large, robust applications. A superb combination of simplicity, elegance, and innovation give you tools you need to build any application with which you are tasked.
+It supports multiple enterprise systems such as **SAP, Email, Internet, Remote Access, E-Leave, Ingress, Athena, and Spark**, providing a centralized and standardized access request workflow.
 
-## Learning Laravel
+## Features
 
-Laravel has the most extensive and thorough documentation and video tutorial library of any modern web application framework. The [Laravel documentation](https://laravel.com/docs) is thorough, complete, and makes it a breeze to get started learning the framework.
+- **User Information Management**  
+  Capture personal details, organizational information, and role assignments.
 
-If you're not in the mood to read, [Laracasts](https://laracasts.com) contains over 900 video tutorials on a range of topics including Laravel, modern PHP, unit testing, JavaScript, and more. Boost the skill level of yourself and your entire team by digging into our comprehensive video library.
+- **Multi-System Access Support**  
+  Manage access requests for up to 8 enterprise systems within a single form.
 
-## Laravel Sponsors
+- **Flexible Operations**
+  - New ID creation
+  - Delete ID
+  - Reset password
+  - Modify existing ID access
 
-We would like to extend our thanks to the following sponsors for helping fund on-going Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](http://patreon.com/taylorotwell):
+- **File Uploads**  
+  Attach templates and application description documents.
 
-- **[Vehikl](http://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Styde](https://styde.net)**
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
+- **Dynamic Forms**  
+  Conditional fields rendered based on request type and selected systems.
 
-## Contributing
+- **Approval Workflow**  
+  Automatic Head of Department (HOD) email population and approval routing.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](http://laravel.com/docs/contributions).
+## Supported Systems
 
-## Security Vulnerabilities
+| System   | Purpose                     |
+|----------|-----------------------------|
+| Athena   | Internal application        |
+| Email    | Corporate email             |
+| Internet | Web access                  |
+| Remote   | VPN / Remote desktop access |
+| E-Leave  | Leave management            |
+| SAP      | ERP system                  |
+| Ingress  | Time & attendance           |
+| Spark    | Communication platform      |
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+## Technical Stack
 
-## License
+- **Framework:** Laravel (Blade)
+- **UI:** Bootstrap, Font Awesome
+- **Controller:** `ReqController@store`
+- **Validation:**
+  - Required fields
+  - Email format
+  - Numeric extension
 
-The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+## Installation & Usage
+
+See the following file for Docker-based setup and deployment:
+
+[Installation_Docker.md](Installation_Docker.md)
